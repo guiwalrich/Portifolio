@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="Guilherme Lopes">
+      <meta name="description" content="Portfólio de Guilherme Lopes — Desenvolvedor Back-End.">
+
+      <title>Guilherme Lopes</title>
+      <link rel="icon" type="image/png" href="./assets/logo-removebg-preview.png">
+
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="styles.css">
+
+      <!-- bootstrap cdns -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+      <!-- google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+            rel="stylesheet">
+
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+      <div class="wrapper">
+
+            <!-- NAVIGATION -->
+            <nav>
+                  <span id="brand">
+                    <a href="/"><img src="./assets/logo-removebg-preview.png" alt="GL" class="brand-logo" /></a>
+                  </span>
+
+                  <ul id="menu">
+                        <li><a href="#home"><span data-i18n="menu-home">home</span><span>.</span></a></li>
+                        <li><a href="#projetos"><span data-i18n="menu-projects">projetos</span><span>.</span></a></li>
+                        <li><a href="#stack"><span data-i18n="menu-stack">stack</span><span>.</span></a></li>
+                        <li><a href="#contato"><span data-i18n="menu-contact">contato</span><span>.</span></a></li>
+                        <li><button id="langToggle" class="nav__lang">EN</button></li>
+                  </ul>
+
+                  <div id="toggle">
+                        <div class="span" data-i18n="menu-toggle">menu</div>
+                  </div>
+            </nav>
+
+            <div id="resize">
+                  <div class="close-btn" data-i18n="menu-close">close</div>
+                  <ul id="menu">
+                        <li><a href="#home"><span data-i18n="menu-home">home</span><span>.</span></a></li>
+                        <li><a href="#projetos"><span data-i18n="menu-projects">projetos</span><span>.</span></a></li>
+                        <li><a href="#stack"><span data-i18n="menu-stack">stack</span><span>.</span></a></li>
+                        <li><a href="#contato"><span data-i18n="menu-contact">contato</span><span>.</span></a></li>
+                  </ul>
+            </div>
+
+            <!-- SCROLL INDICATOR -->
+            <div class="percent">
+                  <div class="fill"></div>
+                  <div class="counter">
+                        <h2></h2>
+                  </div>
+            </div>
+
+            <!-- HERO -->
+            <div class="hero" id="home">
+                  <div class="header">
+                        <h1 class="line anim-typewriter">Guilherme Lopes.</h1>
+                        <p class="hero-subline wow fadeInUp" data-wow-delay="4.5s" data-i18n="hero-subline">Desenvolvedor Back-End, Node.js, TypeScript.</p>
+                  </div>
+            </div>
+
+            <div class="scroll-down"></div>
+
+            <!-- PROJECTS -->
+            <div class="projects-wrapper" id="projetos">
+                  <div class="container">
+                        <h6 class="wow fadeInUp" data-i18n="title-recent">Alguns trabalhos recentes.</h6>
+                        <div class="vertical"></div>
+                        <br>
+                        
+                        <div class="whitespace"></div>
+                        
+                        <div class="row">
+                              <div class="col-lg-12">
+                                    <div class="project project1 wow fadeInUp" data-project-content="WhisperOps: SaaS WhatsApp Analytics com IA."></div>
+                              </div>
+                        </div>
+
+                        <div class="whitespace"></div>
+                        
+                        <div class="row">
+                              <div class="col-lg-12">
+                                    <div class="project project2 wow fadeInUp" data-project-content="ChatBot IA: Assistente  com Groq."></div>
+                              </div>
+                        </div>
+
+                        <div class="whitespace"></div>
+                        
+                        <div class="row">
+                              <div class="col-lg-12">
+                                    <div class="project project3 wow fadeInUp" data-project-content="API RESTful: TypeScript, Prisma & Docker."></div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <div class="whitespace"></div>
+
+            <!-- STACK -->
+            <div class="stack-wrapper" id="stack">
+                  <div class="container">
+                        <h6 class="wow fadeInUp" data-i18n="title-stack">Minha Stack de Tecnologia.</h6>
+                        <div class="vertical"></div>
+                        <br><br><br>
+
+                        <div class="row info wow fadeInUp" data-wow-delay="0.2s">
+                              <div class="col-lg-3 text-center">
+                                    <h4 data-i18n="stack-lang">Linguagens</h4>
+                                    <p>TypeScript, JavaScript</p>
+                              </div>
+                              <div class="col-lg-3 text-center">
+                                    <h4 data-i18n="stack-backend">Back-End</h4>
+                                    <p>Node.js, Express, Prisma</p>
+                              </div>
+                              <div class="col-lg-3 text-center">
+                                    <h4 data-i18n="stack-db">Banco de Dados</h4>
+                                    <p>PostgreSQL</p>
+                              </div>
+                              <div class="col-lg-3 text-center">
+                                    <h4 data-i18n="stack-devops">DevOps & IA</h4>
+                                    <p>Docker, Jest, Git, Groq, Discord.js</p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <!-- FOOTER / CONTACT -->
+            <div class="footer" id="contato">
+                  <div class="container">
+                        <br><br>
+
+                        <div class="collab">
+                              <div class="row">
+                                    <div class="col-lg-12">
+                                          <p class="wow fadeInUp" data-i18n="footer-text">Tem algum projeto em mente ou quer bater um papo? Me chame.</p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <br>
+
+                        <div class="hr">
+                              <div class="row"></div>
+                        </div>
+
+                        <br><br>
+
+                        <div class="info">
+                              <div class="row">
+                                    <div class="col-lg-4" id="personal">
+                                          <p class="wow fadeInUp" data-i18n="footer-github">github</p>
+                                          <li id="gh" class="wow fadeInUp" data-wow-delay="0.2s"
+                                                onclick="window.open('https://github.com/guiwalrich', '_blank')">guiwalrich</li>
+                                          <br><br>
+                                    </div>
+
+                                    <div class="col-lg-4" id="media">
+                                          <p class="wow fadeInUp" data-wow-delay="0s" data-i18n="footer-social">redes</p>
+                                          <ul>
+                                                <li id="li" class="wow fadeInUp" data-wow-delay="0.2s"
+                                                      onclick="window.open('https://www.linkedin.com/in/guilhermecode/', '_blank')">linkedin</li>
+                                          </ul>
+                                          <br><br>
+                                    </div>
+
+                                    <div class="col-lg-4" id="address">
+                                          <p class="wow fadeInUp" data-wow-delay="0.1s" data-i18n="footer-contact">contato</p>
+                                          <h4 class="wow fadeInUp" data-wow-delay="0.8s">glopescontato0@gmail.com</h4>
+                                          <br><br>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <br><br><br><br>
+
+      </div>
+
+      <!-- greensock cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      
+      <!-- wow js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+      
+      <!-- custom script -->
+      <script src="script.js"></script>
+</body>
+
+</html>

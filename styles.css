@@ -1,0 +1,551 @@
+/*--------------- basic styling --------------- */
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "Roboto Mono", monospace !important;
+      background: #0f0f0f !important;
+      color: #fff !important;
+      scroll-behavior: smooth;
+}
+
+.whitespace {
+      width: 100%;
+      height: 100px;
+}
+
+@media(max-width: 768px) {
+      .whitespace {
+            display: none;
+      }
+}
+
+/*--------------- typewriter effect --------------- */
+.hero-subline {
+      font-weight: 300;
+      text-align: center;
+      margin-top: 10px;
+      color: #999;
+      font-size: 16px;
+}
+
+.line {
+      width: 50em;
+      top: 50%;
+      margin: auto;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);
+}
+
+.anim-typewriter {
+      animation: typewriter 3s steps(40) 1s 1 normal both,
+      blinkTextCussor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+      from {
+            width: 0;
+      }
+      to {
+            width: 10em;
+      }
+}
+
+@media(max-width: 768px) {
+      @keyframes typewriter {
+            from {
+                  width: 0;
+            }
+            to {
+                  width: 10em;
+            }
+      }
+}
+
+@keyframes blinkTextCussor {
+      from {
+            border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+            border-right-color: transparent;
+      }
+}
+
+/*--------------- navigation --------------- */
+nav {
+      width: 100%;
+      background: #0f0f0f;
+      height: 80px;
+      position: fixed;
+      z-index: 10;
+}
+
+nav #brand {
+      float: left;
+      display: block;
+      margin-left: 82px;
+      line-height: 80px;
+}
+
+nav #brand a {
+      color: #fff;
+      transition: all 0.3s ease-out;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      height: 80px;
+}
+
+nav #brand a:hover {
+      text-decoration: none;
+}
+
+.brand-logo {
+      height: 80px;
+      width: auto;
+}
+
+nav #menu {
+      float: left;
+      right: 80px;
+      position: fixed;
+}
+
+nav #menu li {
+      padding-left: 40px;
+      display: inline-block;
+      cursor: pointer;
+      font-weight: 300;
+      line-height: 80px;
+      position: relative;
+      transition: all 0.3s ease-out;
+}
+
+nav #menu li span {
+      font-weight: 700;
+}
+
+nav #menu li a {
+      color: #fff;
+      text-decoration: none;
+}
+
+nav #menu li a:hover {
+      text-decoration: none;
+}
+
+.nav__lang {
+      font-family: "Roboto Mono", monospace;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 300;
+      padding: 0;
+      outline: none;
+      transition: all 0.3s ease-out;
+}
+
+.nav__lang:hover {
+      color: #ccc;
+}
+
+#toggle {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      font-weight: 300;
+      z-index: 20;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      float: right;
+      transition: all 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+}
+
+.close-btn {
+      position: absolute;
+      right: 16px;
+      font-weight: 300;
+      z-index: 20;
+      cursor: pointer;
+      top: -2px;
+      line-height: 80px;
+}
+
+#resize {
+      z-index: 15;
+      top: 0px;
+      position: fixed;
+      background: #0f0f0f;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease-out;
+}
+
+#resize #menu {
+      height: 90px;
+      position: absolute;
+      left: 45%;
+      transform: translateX(-40%);
+      text-align: center;
+      display: table-cell;
+      vertical-align: center;
+      list-style: none;
+      padding: 0;
+}
+
+#resize #menu li {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 50px;
+      min-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+      margin-top: 140px;
+}
+
+#resize #menu li a {
+      color: #fff;
+      text-decoration: none;
+}
+
+#resize #menu li a:hover {
+      text-decoration: none;
+}
+
+#resize.active {
+      visibility: visible;
+      opacity: 1;
+}
+
+@media(max-width: 768px) {
+      #toggle {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 6px;
+            margin-right: 4px;
+      }
+
+      nav #brand {
+            margin-left: 24px;
+      }
+
+      #menu a {
+            font-size: 20px;
+            font-weight: 300;
+      }
+
+      #resize li span {
+            font-weight: bolder;
+      }
+
+      nav #menu {
+            display: none;
+      }
+}
+
+@media(min-width: 768px) {
+      #resize {
+            visibility: hidden !important;
+      }
+}
+
+/*--------------- hero section --------------- */
+.hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.hero h1 {
+      font-weight: lighter;
+      text-align: center;
+      letter-spacing: -2px;
+      line-height: 58px;
+}
+
+@media(max-width: 768px) {
+      .header h1 {
+            font-size: 26px;
+      }
+      .hero-subline {
+            font-size: 14px;
+            padding: 0 15px;
+      }
+}
+
+/*--------------- scroll down icon animation --------------- */
+.scroll-down {
+      position: absolute;
+      left: 50%;
+      bottom: 100px;
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      z-index: 0;
+      text-decoration: none;
+      text-shadow: 0;
+      width: 13px;
+      height: 13px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      -webkit-transform: translate(-50%, 0) rotate(45deg);
+      animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+@keyframes fade_move_down {
+      0% {
+            transform: translate(0, -20px) rotate(45deg);
+            opacity: 0;
+      }
+      50% {
+            opacity: 1;
+      }
+      100% {
+            transform: translate(0, 20px) rotate(45deg);
+            opacity: 0;
+      }
+}
+
+/*--------------- projects section --------------- */
+h6 {
+      text-align: center;
+      margin-top: 50px;
+}
+
+.vertical {
+      margin-top: 40px;
+      border-left: 1px solid #fff;
+      height: 80px;
+      position: absolute;
+      left: 50%;
+}
+
+.project {
+      height: 500px;
+      position: relative;
+}
+
+.project-link {
+      display: block;
+      text-decoration: none;
+}
+
+.project-link:hover .project {
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+}
+
+/* WhisperOps — Dashboard/Analytics */
+.project1 {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1650&q=80) no-repeat 50% 50%;
+      background-size: cover;
+}
+
+.project1::after {
+      content: attr(data-project-content);
+      font-family: "Roboto Mono";
+      font-size: 36px;
+      position: absolute;
+      color: #fff;
+      display: block;
+      top: 10%;
+      left: 10%;
+      right: 10%;
+}
+
+/* ChatBot com IA — Robô/IA */
+.project2 {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1650&q=80) no-repeat 50% 50%;
+      background-size: cover;
+}
+
+.project2::after {
+      content: attr(data-project-content);
+      font-family: "Roboto Mono";
+      font-size: 36px;
+      position: absolute;
+      color: #fff;
+      display: block;
+      bottom: 10%;
+      right: 10%;
+      text-align: right;
+      width: 80%;
+}
+
+/* API TypeScript — Código/Servidor */
+.project3 {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1650&q=80) no-repeat 50% 50%;
+      background-size: cover;
+}
+
+.project3::after {
+      content: attr(data-project-content);
+      font-family: "Roboto Mono";
+      font-size: 36px;
+      position: absolute;
+      color: #fff;
+      display: block;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+}
+
+@media(max-width: 768px) {
+      .project {
+            width: 90% !important;
+            margin: 14px auto;
+            height: 300px;
+      }
+
+      .vertical {
+            display: none;
+      }
+
+      .project1::after, .project2::after, .project3::after {
+            font-size: 20px;
+            top: auto;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            text-align: left;
+            transform: none;
+      }
+}
+
+/*--------------- stack section --------------- */
+.stack-wrapper {
+      padding-bottom: 50px;
+}
+
+/*--------------- footer section --------------- */
+.collab {
+      text-align: right;
+}
+
+.collab p {
+      font-weight: lighter !important;
+      margin-bottom: 20px;
+}
+
+.hr {
+      background: rgba(255, 255, 255, 0.2);
+      height: 1px;
+}
+
+.info h4 {
+      font-size: 18px;
+      font-weight: lighter;
+}
+
+.info p {
+      color: grey;
+      font-weight: lighter;
+}
+
+.info ul {
+      list-style: none;
+}
+
+.info li {
+      font-weight: lighter;
+      color: #fff;
+      font-size: 18px;
+      padding-left: 20px;
+      cursor: pointer;
+}
+
+#gh::before {
+      display: inline-block;
+      content: '';
+      border-radius: 100%;
+      height: 4px;
+      width: 4px;
+      margin-right: 6px;
+      background: #fff;
+}
+
+#li::before {
+      display: inline-block;
+      content: '';
+      border-radius: 100%;
+      height: 4px;
+      width: 4px;
+      margin-right: 6px;
+      background: #0077b5;
+}
+
+#media, #address {
+      text-align: right;
+}
+
+#media ul {
+      list-style: none;
+}
+
+#media ul li {
+      display: inline-block;
+}
+
+@media(max-width: 768px) {
+      .collab, #personal, #media, #address {
+            text-align: center;
+      }
+
+      .info ul {
+            margin: 0 0 0 -22px;
+            padding: 0;
+      }
+}
+
+/*-------------navigator--------------*/
+h2 {
+    position: absolute;
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: lighter;
+    color: dimgray !important;
+    margin: 20px;
+}
+
+.percent {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    height: 140px;
+    width: 1px;
+    margin: -60px 0 0 40px;
+    z-index: 5;
+}
+
+.fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: background 0.15s ease;
+}
+
+@media(max-width: 768px) {
+      .percent {
+            display: none;
+      }
+}
