@@ -10,10 +10,9 @@ const translations = {
             "hero-subline": "Desenvolvedor Back-End, Node.js, TypeScript.",
             "title-recent": "Alguns trabalhos recentes.",
             "title-stack": "Minha Stack de Tecnologia.",
-            "stack-lang": "Linguagens",
             "stack-backend": "Back-End",
-            "stack-db": "Banco de Dados",
-            "stack-devops": "DevOps & IA",
+            "stack-frontend": "Front-End",
+            "stack-devops": "DevOps & Ferramentas",
             "title-solutions": "Soluções Digitais Sob Medida.",
             "desc-solutions": "Desenvolvo Landing Pages, Sistemas de Agendamento, Catálogos, ChatBots e muito mais. Projetos criados sob medida para resolver a dor do seu negócio e atrair mais clientes.",
             "btn-whatsapp": "Fazer um orçamento no WhatsApp",
@@ -38,10 +37,9 @@ const translations = {
             "hero-subline": "Back-End Developer, Node.js, TypeScript.",
             "title-recent": "Some recent works.",
             "title-stack": "My Technology Stack.",
-            "stack-lang": "Languages",
             "stack-backend": "Back-End",
-            "stack-db": "Databases",
-            "stack-devops": "DevOps & AI",
+            "stack-frontend": "Front-End",
+            "stack-devops": "DevOps & Tools",
             "title-solutions": "Custom Digital Solutions.",
             "desc-solutions": "I develop Landing Pages, Scheduling Systems, Catalogs, ChatBots and more. Tailor-made projects to solve your business pain points and attract more clients.",
             "btn-whatsapp": "Get a quote on WhatsApp",
@@ -78,6 +76,11 @@ function applyLanguage(lang) {
       if (toggleBtn) {
             toggleBtn.textContent = lang === "pt" ? "EN" : "PT";
       }
+
+      const toggleBtnMobile = document.getElementById("langToggleMobile");
+      if (toggleBtnMobile) {
+            toggleBtnMobile.textContent = lang === "pt" ? "EN" : "PT";
+      }
       
       const htmlRoot = document.getElementById("html-root");
       if (htmlRoot) {
@@ -92,6 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const toggleBtn = document.getElementById("langToggle");
       if (toggleBtn) {
             toggleBtn.addEventListener("click", () => {
+                  currentLang = currentLang === "pt" ? "en" : "pt";
+                  localStorage.setItem("lang", currentLang);
+                  applyLanguage(currentLang);
+            });
+      }
+
+      const toggleBtnMobile = document.getElementById("langToggleMobile");
+      if (toggleBtnMobile) {
+            toggleBtnMobile.addEventListener("click", () => {
                   currentLang = currentLang === "pt" ? "en" : "pt";
                   localStorage.setItem("lang", currentLang);
                   applyLanguage(currentLang);
