@@ -27,6 +27,7 @@
 </head>
 
 <body>
+      <div class="cursor"></div>
       <div class="wrapper">
 
             <!-- NAVIGATION -->
@@ -41,6 +42,7 @@
                         <li><a href="#solucoes"><span data-i18n="menu-solutions">soluções</span><span>.</span></a></li>
                         <li><a href="#stack"><span data-i18n="menu-stack">stack</span><span>.</span></a></li>
                         <li><a href="#contato"><span data-i18n="menu-contact">contato</span><span>.</span></a></li>
+                        <li><button id="themeToggle" class="nav__lang">☀️</button></li>
                         <li><button id="langToggle" class="nav__lang">EN</button></li>
                   </ul>
 
@@ -57,6 +59,7 @@
                         <li><a href="#solucoes"><span data-i18n="menu-solutions">soluções</span><span>.</span></a></li>
                         <li><a href="#stack"><span data-i18n="menu-stack">stack</span><span>.</span></a></li>
                         <li><a href="#contato"><span data-i18n="menu-contact">contato</span><span>.</span></a></li>
+                        <li><button id="themeToggleMobile" class="nav__lang">☀️</button></li>
                         <li><button id="langToggleMobile" class="nav__lang">EN</button></li>
                   </ul>
             </div>
@@ -71,6 +74,7 @@
 
             <!-- HERO -->
             <div class="hero" id="home">
+                  <div id="particles-js"></div>
                   <div class="header">
                         <h1 class="line anim-typewriter">Guilherme Lopes.</h1>
                         <p class="hero-subline wow fadeInUp" data-wow-delay="4.5s" data-i18n="hero-subline">Desenvolvedor Back-End, Node.js, TypeScript.</p>
@@ -150,7 +154,6 @@
             <div class="stack-wrapper" id="stack">
                   <div class="container">
                         <h6 class="wow fadeInUp" data-i18n="title-stack">Minha Stack de Tecnologia.</h6>
-                        <div class="vertical"></div>
                         <br><br><br>
 
                         <div class="row info wow fadeInUp" data-wow-delay="0.2s">
@@ -231,6 +234,9 @@
       
       <!-- wow js -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+      <!-- particles.js -->
+      <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
       
       <!-- custom script -->
       <script src="script.js"></script>

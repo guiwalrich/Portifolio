@@ -56,6 +56,23 @@ const translations = {
 };
 
 let currentLang = localStorage.getItem("lang") || "pt";
+let currentTheme = localStorage.getItem("theme") || "dark";
+
+function applyTheme(theme) {
+      const htmlRoot = document.getElementById("html-root");
+      const themeBtn = document.getElementById("themeToggle");
+      const themeBtnMobile = document.getElementById("themeToggleMobile");
+
+      if (theme === "light") {
+            htmlRoot.setAttribute("data-theme", "light");
+            if (themeBtn) themeBtn.textContent = "🌙";
+            if (themeBtnMobile) themeBtnMobile.textContent = "🌙";
+      } else {
+            htmlRoot.removeAttribute("data-theme");
+            if (themeBtn) themeBtn.textContent = "☀️";
+            if (themeBtnMobile) themeBtnMobile.textContent = "☀️";
+      }
+}
 
 function applyLanguage(lang) {
       document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -107,6 +124,27 @@ document.addEventListener("DOMContentLoaded", () => {
                   currentLang = currentLang === "pt" ? "en" : "pt";
                   localStorage.setItem("lang", currentLang);
                   applyLanguage(currentLang);
+            });
+      }
+
+      // Initialize theme
+      applyTheme(currentTheme);
+
+      const themeBtn = document.getElementById("themeToggle");
+      if (themeBtn) {
+            themeBtn.addEventListener("click", () => {
+                  currentTheme = currentTheme === "dark" ? "light" : "dark";
+                  localStorage.setItem("theme", currentTheme);
+                  applyTheme(currentTheme);
+            });
+      }
+
+      const themeBtnMobile = document.getElementById("themeToggleMobile");
+      if (themeBtnMobile) {
+            themeBtnMobile.addEventListener("click", () => {
+                  currentTheme = currentTheme === "dark" ? "light" : "dark";
+                  localStorage.setItem("theme", currentTheme);
+                  applyTheme(currentTheme);
             });
       }
 });
@@ -186,5 +224,45 @@ $(document).ready(function () {
 
             progress();
             $(document).on("scroll", progress);
+      }
+
+      // Initialize Particles.js
+      if (window.particlesJS) {
+            particlesJS("particles-js", {
+                  "particles": {
+                        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                        "color": { "value": "#999999" },
+                        "shape": { "type": "circle" },
+                        "opacity": { "value": 0.5, "random": false },
+                        "size": { "value": 3, "random": true },
+                        "line_linked": { "enable": true, "distance": 150, "color": "#999999", "opacity": 0.4, "width": 1 },
+                        "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+                  },
+                  "interactivity": {
+                        "detect_on": "canvas",
+                        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                        "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+                  },
+                  "retina_detect": true
+            });
+      }
+
+      // Magnetic Custom Cursor
+      const cursor = document.querySelector(".cursor");
+      if (cursor && window.innerWidth > 768) {
+            document.addEventListener("mousemove", (e) => {
+                  cursor.style.left = e.clientX + "px";
+                  cursor.style.top = e.clientY + "px";
+            });
+
+            const interactables = document.querySelectorAll("a, button, .project, .info li, .nav__lang");
+            interactables.forEach(el => {
+                  el.addEventListener("mouseenter", () => {
+                        cursor.classList.add("hovered");
+                  });
+                  el.addEventListener("mouseleave", () => {
+                        cursor.classList.remove("hovered");
+                  });
+            });
       }
 });
