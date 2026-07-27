@@ -18,8 +18,10 @@ const translations = {
             "footer-social": "redes",
             "footer-contact": "contato",
             "project1": "WhisperOps: SaaS WhatsApp Analytics com IA.",
-            "project2": "ChatBot IA: Assistente Discord com Groq.",
-            "project3": "API RESTful: TypeScript, Prisma & Docker."
+            "project2": "ChatBot IA: Assistente WhatsApp com Groq.",
+            "project3": "API RESTful: TypeScript, Prisma & Docker.",
+            "project4": "MVP Serviços: Plataforma de contratação de serviços.",
+            "project5": "Marks Advocacia: Landing Page Institucional."
       },
       en: {
             "menu-home": "home",
@@ -40,8 +42,10 @@ const translations = {
             "footer-social": "social",
             "footer-contact": "contact",
             "project1": "WhisperOps: WhatsApp Analytics SaaS with AI.",
-            "project2": "AI ChatBot: Discord Assistant with Groq.",
-            "project3": "RESTful API: TypeScript, Prisma & Docker."
+            "project2": "AI ChatBot: WhatsApp Assistant with Groq.",
+            "project3": "RESTful API: TypeScript, Prisma & Docker.",
+            "project4": "MVP Serviços: Service hiring platform.",
+            "project5": "Marks Advocacia: Institutional Landing Page."
       }
 };
 
