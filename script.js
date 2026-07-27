@@ -2,6 +2,7 @@ const translations = {
       pt: {
             "menu-home": "home",
             "menu-projects": "projetos",
+            "menu-solutions": "soluções",
             "menu-stack": "stack",
             "menu-contact": "contato",
             "menu-toggle": "menu",
@@ -13,6 +14,9 @@ const translations = {
             "stack-backend": "Back-End",
             "stack-db": "Banco de Dados",
             "stack-devops": "DevOps & IA",
+            "title-solutions": "Soluções Digitais Sob Medida.",
+            "desc-solutions": "Desenvolvo Landing Pages, Sistemas de Agendamento, Catálogos, ChatBots e muito mais. Projetos criados sob medida para resolver a dor do seu negócio e atrair mais clientes.",
+            "btn-whatsapp": "Fazer um orçamento no WhatsApp",
             "footer-text": "Tem algum projeto em mente ou quer bater um papo? Me chame.",
             "footer-github": "github",
             "footer-social": "redes",
@@ -20,12 +24,13 @@ const translations = {
             "project1": "WhisperOps: SaaS WhatsApp Analytics com IA.",
             "project2": "ChatBot IA: Assistente WhatsApp com Groq.",
             "project3": "API RESTful: TypeScript, Prisma & Docker.",
-            "project4": "MVP Serviços: Plataforma de contratação de serviços.",
-            "project5": "Marks Advocacia: Landing Page Institucional."
+            "project4": "MVP Agenda: Sistema inteligente de agendamento.",
+            "project5": "Marks Advocacia: Landing Page para escritório."
       },
       en: {
             "menu-home": "home",
             "menu-projects": "projects",
+            "menu-solutions": "solutions",
             "menu-stack": "stack",
             "menu-contact": "contact",
             "menu-toggle": "menu",
@@ -37,6 +42,9 @@ const translations = {
             "stack-backend": "Back-End",
             "stack-db": "Databases",
             "stack-devops": "DevOps & AI",
+            "title-solutions": "Custom Digital Solutions.",
+            "desc-solutions": "I develop Landing Pages, Scheduling Systems, Catalogs, ChatBots and more. Tailor-made projects to solve your business pain points and attract more clients.",
+            "btn-whatsapp": "Get a quote on WhatsApp",
             "footer-text": "Have a project in mind or want to chat? Hit me up.",
             "footer-github": "github",
             "footer-social": "social",
@@ -44,8 +52,8 @@ const translations = {
             "project1": "WhisperOps: WhatsApp Analytics SaaS with AI.",
             "project2": "AI ChatBot: WhatsApp Assistant with Groq.",
             "project3": "RESTful API: TypeScript, Prisma & Docker.",
-            "project4": "MVP Serviços: Service hiring platform.",
-            "project5": "Marks Advocacia: Institutional Landing Page."
+            "project4": "MVP Agenda: Smart scheduling system.",
+            "project5": "Marks Advocacia: Law office landing page."
       }
 };
 
